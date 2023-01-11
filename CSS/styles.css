@@ -1,0 +1,40 @@
+* {
+  font-family: hervetica ;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+  
+}
+h1 {
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 500px;
+  margin: 0 auto ;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 1.1rem;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 55px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+}
