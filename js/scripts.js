@@ -5,14 +5,13 @@ const passwordInput = document.querySelector('#password')
 const jobSelect = document.querySelector('#job')
 const messageTextarea = document.querySelector('#message')
 
-
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', event => {
   event.preventDefault()
 
   // Verifica se o nome está vazio
-  if (nameInput.value === '') { 
-    alert('Por favor, preencha o seu nome');
-    return;
+  if (nameInput.value === '') {
+    alert('Por favor, preencha o seu nome')
+    return
   }
 
   // verifica se o email está preenchido e se é válido.
@@ -40,8 +39,8 @@ form.addEventListener('submit', (event) => {
   }
 
   //se todos os campos estiverem devidamente preenchido enviar o formulário.
-  form.submit();
-});
+  form.submit()
+})
 
 //Função que valida e-mail
 function isEmailValid(email) {
@@ -49,19 +48,18 @@ function isEmailValid(email) {
   const emailRegex = new RegExp(
     // uruario12@host.com.br
     /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
-  );
-  if(emailRegex.test(email)) {
-    return true;
+  )
+  if (emailRegex.test(email)) {
+    return true
   }
-  return false;
+  return false
 }
 // função que valida a senha
 function validatePassword(password, minDigits) {
   if (password.length >= minDigits) {
     // senha valida
-    return true;
+    return true
   }
-  // senha inválidas
-  return false;
+  // senha inválida
+  return false
 }
-
